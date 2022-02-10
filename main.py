@@ -87,29 +87,78 @@ def form_sample():
                             <title>Пример формы</title>
                           </head>
                           <body>
-                            <h1>Форма для регистрации в суперсекретной системе</h1>
+                            <h1>Анкета претендента</h1>
+                            <h2>на участие в миссии</h2>
                             <div>
                                 <form class="login_form" method="post">
-                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите адрес почты" name="email">
-                                    <input type="password" class="form-control" id="password" placeholder="Введите пароль" name="password">
+                                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Введите фамилию" name="email">
+                                    <input type="password" class="form-control" id="password" placeholder="Введите имя" name="password">
+                                    <input type="password" class="form-control" id="password" placeholder="Введите адресс почты" name="password">
                                     <div class="form-group">
-                                        <label for="classSelect">В каком вы классе</label>
+                                        <label for="classSelect">Какое у вас образование</label>
                                         <select class="form-control" id="classSelect" name="class">
-                                          <option>7</option>
-                                          <option>8</option>
-                                          <option>9</option>
-                                          <option>10</option>
-                                          <option>11</option>
+                                          <option>Начальное</option>
+                                          <option>Среднее специальное</option>
+                                          <option>Высшее</option>>
                                         </select>
                                      </div>
-                                    <div class="form-group">
-                                        <label for="about">Немного о себе</label>
-                                        <textarea class="form-control" id="about" rows="3" name="about"></textarea>
+  
+                            <div class="form-group">
+                                        <label for="form-check">Какие у вас есть профессии?</label>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="engineer_researcher"
+                                           value="engineer_researcher" checked>
+                                          <label class="form-check-label" for="engineer_researcher">
+                                            Инженер-иследователь
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="civil_engineer" value="civil_engineer">
+                                          <label class="form-check-label" for="civil_engineer">
+                                            Инженер-строитель
+                                          </label>
+                                        </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="photo">Приложите фотографию</label>
-                                        <input type="file" class="form-control-file" id="photo" name="file">
-                                    </div>
+                                                                     <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="pilot" value="pilot" checked>
+                                          <label class="form-check-label" for="pilot">
+                                            Пилот
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="meteo" value="meteo" checked>
+                                          <label class="form-check-label" for="meteo">
+                                            Метеоролог
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="life_support_engineer" 
+                                          value="life_support_engineer" checked>
+                                          <label class="form-check-label" for="life_support_engineer">
+                                            Инженер по жизнеобесепчению
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="radiation_protection_engineer" 
+                                          value="radiation_protection_engineer" checked>
+                                          <label class="form-check-label" for="radiation_protection_engineer">
+                                            Инженер по радиационной защите
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="doctor" 
+                                          value="doctor" checked>
+                                          <label class="form-check-label" for="doctor">
+                                            Врач
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="radio" name="prof" id="ekz" 
+                                          value="ekz" checked>
+                                          <label class="form-check-label" for="ekz">
+                                            Экзобиолог
+                                          </label>
+                                        </div>
                                     <div class="form-group">
                                         <label for="form-check">Укажите пол</label>
                                         <div class="form-check">
@@ -124,12 +173,21 @@ def form_sample():
                                             Женский
                                           </label>
                                         </div>
+
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="about">Почему вы хотите принять участие в миссии?</label>
+                                        <textarea class="form-control" id="about" rows="3" name="about"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="photo">Приложите фотографию</label>
+                                        <input type="file" class="form-control-file" id="photo" name="file">
                                     </div>
                                     <div class="form-group form-check">
                                         <input type="checkbox" class="form-check-input" id="acceptRules" name="accept">
-                                        <label class="form-check-label" for="acceptRules">Готов быть добровольцем</label>
+                                        <label class="form-check-label" for="acceptRules">Готовы остаться на Марсе?</label>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Записаться</button>
+                                    <button type="submit" class="btn btn-primary">Отправить</button>
                                 </form>
                             </div>
                           </body>
